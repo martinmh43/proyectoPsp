@@ -2,7 +2,7 @@ package ejemplo7;
 
 public class EjemploInterrupt extends Thread {
     public void run() {
-        while (!isInterrupted()) {
+        while (!this.isInterrupted()) {
             System.out.println("en el Hilo");
             try {
                 Thread.sleep(200);
@@ -11,6 +11,7 @@ public class EjemploInterrupt extends Thread {
                 interrupt();
             }
         }
+
     }
     public static void main(String[] args) throws InterruptedException {
         EjemploInterrupt h = new EjemploInterrupt();
