@@ -6,7 +6,8 @@ public class Main {
 
     private static void run() {
         for (int i = 0; i < 100; i++) {
-            c.inc();
+            for(int j = 0; j<100; j++)
+                c.inc();
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {

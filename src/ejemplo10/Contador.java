@@ -6,9 +6,11 @@ public class Contador {
     public Contador(int n) {
         this.n = n;
     }
+    
     public synchronized void inc() {
         n++;
     }
+
     public int get() {
         return n;
     }
