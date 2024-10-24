@@ -24,14 +24,13 @@ public class Mesa {
 
     public synchronized void retirarIngredientes(String ingrediente) {
 
-        while (ingredientes.contains(ingrediente)) {
+        while (!ingredientes.contains(ingrediente)) {
            try {
                wait();
            } catch (InterruptedException e) {
                throw new RuntimeException(e);
            }
         }
-
         ingredientes.clear();
         notifyAll();
     }
