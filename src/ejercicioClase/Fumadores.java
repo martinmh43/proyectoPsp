@@ -13,6 +13,8 @@ public class Fumadores extends Thread {
         this.ingrediente = ingrediente;
     }
 
+
+
     @Override
     public void run() {
         while (!detenido) {
