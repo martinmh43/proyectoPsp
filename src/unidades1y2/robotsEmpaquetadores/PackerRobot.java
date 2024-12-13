@@ -10,7 +10,7 @@ class PackerRobot implements Runnable {
         this.productType = productType;
     }
 
-    @Override
+
     public void run() {
         try {
             while (true) {
